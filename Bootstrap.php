@@ -35,5 +35,5 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     $composer = include __DIR__ . '/vendor/autoload.php';
     $composer->add('MotUsers', include __DIR__ . '/autoload_register.php');
 } else {
-    throw new RuntimeException('Unable to load MotAdmin module. Run `composer install` to install dependencies');
+    throw new RuntimeException('Unable to load MotUsers module. Run `composer install` to install dependencies');
 }
