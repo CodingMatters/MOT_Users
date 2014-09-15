@@ -24,14 +24,34 @@
  * THE SOFTWARE.
  */
 
-namespace MotUsers\Controller;
+namespace MotUsersTest;
+
+use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
 /**
- * MotUsers\Controller\UserController
+ * MotUsersTest\UserLoginTest
  *
- * @package MotUsers\Controller
+ * @package MotUsersTest
  */
-class UserController
+class UserLoginTest extends AbstractHttpControllerTestCase
 {
+    protected $traceError = true;
     
+    public function setUp()
+    {
+        $this->setApplicationConfig(
+            include __DIR__ . '/../../../../config/application.config.php'
+        );
+        parent::setUp();
+    }
+    
+    public function testLoginPageCanBeAccess()
+    {
+        $this->dispatch('/user/login');
+        $this->assertResponseStatusCode(200);
+        $this->assertModuleName('ZfcUser');
+        $this->assertControllerName('zfcuser');
+        $this->assertControllerClass('UserController');
+        $this->assertMatchedRouteName('zfcuser/login');        
+    }
 }
