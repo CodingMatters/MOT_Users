@@ -27,10 +27,11 @@
 namespace MotUsers\Controller;
 
 /**
- * MotUser\Controller\UserController
+ * MotUsers\Controller\UserController
  *
- * @package MotUser\Controller
+ * @package MotUsers\Controller
  */
-class UserController {
+class UserController
+{
     
 }
