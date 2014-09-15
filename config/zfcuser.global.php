@@ -30,7 +30,7 @@ $settings = [
      *
      * Accepted values: boolean true or false
      */
-    'enable_registration' => false,
+    'enable_registration' => true,
 
     /**
      * Enable Username
@@ -71,7 +71,7 @@ $settings = [
      * Default value: array containing 'email'
      * Accepted values: array containing one or more of: email, username
      */
-    'auth_identity_fields' => ['username','email' ],
+    'auth_identity_fields' => ['username', 'email' ],
 
     /**
      * Login form timeout
@@ -225,11 +225,11 @@ $settings = [
 /**
  * You do not need to edit below this line
  */
-return array(
+return [
     'zfcuser' => $settings,
-    'service_manager' => array(
-        'aliases' => array(
+    'service_manager' => [
+        'aliases' => [
             'zfcuser_zend_db_adapter' => (isset($settings['zend_db_adapter'])) ? $settings['zend_db_adapter']: 'Zend\Db\Adapter\Adapter',
-        ),
-    ),
-);
+        ],
+    ],
+];
