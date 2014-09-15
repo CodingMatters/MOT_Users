@@ -24,7 +24,7 @@
  * THE SOFTWARE.
  */
 
-namespace MotUser\Controller;
+namespace MotUsers\Controller;
 
 /**
  * MotUser\Controller\UserController
