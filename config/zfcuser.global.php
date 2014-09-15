@@ -12,7 +12,7 @@ $settings = [
      * Please specify the DI alias for the configured Zend\Db\Adapter\Adapter
      * instance that ZfcUser should use.
      */
-    'zend_db_adapter' => 'Zend\Db\Adapter\Adapter',
+    'zend_db_adapter' => 'motdb',
 
     /**
      * User Model Entity Class
@@ -21,7 +21,7 @@ $settings = [
      * instead of the default one provided. Default is ZfcUser\Entity\User.
      * The entity class should implement ZfcUser\Entity\UserInterface
      */
-    //'user_entity_class' => 'ZfcUser\Entity\User',
+    'user_entity_class' => 'MotUsers\Entity\User',
 
     /**
      * Enable registration
@@ -101,7 +101,7 @@ $settings = [
      *
      * Accepted values: boolean true or false
      */
-    //'login_after_registration' => true,
+    'login_after_registration' => false,
 
     /**
      * Registration Form Captcha
@@ -153,7 +153,7 @@ $settings = [
      * Accepted values: A valid route name within your application
      *
      */
-    //'login_redirect_route' => 'zfcuser',
+     'login_redirect_route' => 'home',
 
     /**
      * Logout Redirect Route
@@ -163,7 +163,7 @@ $settings = [
      * Default value: 'zfcuser/login'
      * Accepted values: A valid route name within your application
      */
-    //'logout_redirect_route' => 'zfcuser/login',
+     'logout_redirect_route' => 'zfcuser/login',
 
     /**
      * Password Security
@@ -229,7 +229,7 @@ return [
     'zfcuser' => $settings,
     'service_manager' => [
         'aliases' => [
-            'zfcuser_zend_db_adapter' => (isset($settings['zend_db_adapter'])) ? $settings['zend_db_adapter']: 'Zend\Db\Adapter\Adapter',
+            'zfcuser_zend_db_adapter' => (isset($settings['zend_db_adapter'])) ? $settings['zend_db_adapter']: 'Zend\Db\Adapter\AdapterAbstractServiceFactory',
         ],
     ],
 ];

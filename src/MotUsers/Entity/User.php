@@ -24,17 +24,20 @@
  * THE SOFTWARE.
  */
 
-return [
-    'view_manager'  => [
-        'template_map' => [
-            'layout/mot-user' => __DIR__ . '/../view/layout/layout.phtml'
-        ],
-        'template_path_stack'       => [
-            'mot-user'   => __DIR__ . '/../view'
-        ],
-    ],
-    'module_layouts' => [
-//        'MotUsers' => 'layout/mot-user',
-        'ZfcUser' => 'layout/mot-user',
-    ]
-];
+namespace MotUsers\Entity;
+
+use ZfcUser\Entity\User AS ZfcUserEntity;
+use ZfcRbac\Identity\IdentityInterface AS ZfcRbacIdentityInterface;
+
+/**
+ * MotUsers\Entity\User
+ *
+ * @package MotUsers\Entity
+ */
+class User extends ZfcUserEntity implements ZfcRbacIdentityInterface
+{
+    public function getRoles()
+    {
+        return 'user';
+    }
+}
