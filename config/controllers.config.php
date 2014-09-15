@@ -27,7 +27,7 @@
 return [
     'controllers' => [
         'invokables' => [
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'MotUsers\Controller\User' => 'MotUsers\Controller\UserController'
         ]
     ]
 ];

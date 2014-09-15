@@ -41,6 +41,9 @@ class Module
         $eventManager        = $event->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+        
+        $serviceManager = $event->getApplication()->getServiceManager();
+        $eventManager->attach($serviceManager->get('ZfcRbac\View\Strategy\RedirectStrategy'));
     }
 
     public function getConfig()

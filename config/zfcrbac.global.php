@@ -28,14 +28,14 @@ return [
          * Please note that when an identity is found, it MUST implements the ZfcRbac\Identity\IdentityProviderInterface
          * interface, otherwise it will throw an exception.
          */
-        // 'identity_provider' => 'ZfcRbac\Identity\AuthenticationIdentityProvider',
+        'identity_provider' => 'ZfcRbac\Identity\AuthenticationIdentityProvider',
 
         /**
          * Set the guest role
          *
          * This role is used by the authorization service when the authentication service returns no identity
          */
-        // 'guest_role' => 'guest',
+         'guest_role' => 'guest',
 
         /**
          * Set the guards
@@ -48,7 +48,14 @@ return [
          *          ]
          *      ]
          */
-        // 'guards' => [],
+         'guards' => [
+            'ZfcRbac\Guard\RouteGuard' => [
+                'home' => ['admin', 'user'],
+                'zfcuser/user/login' => ['guest'],
+                'zfcuser/user/login' => ['admin'],
+//                'zfcuser/*' => ['user'],
+            ]
+         ],
 
         /**
          * As soon as one rule for either route or controller is specified, a guard will be automatically
@@ -60,7 +67,7 @@ return [
          *
          * DENY is the most secure way, but it is more work for the developer
          */
-        // 'protection_policy' => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,
+         'protection_policy' => \ZfcRbac\Guard\GuardInterface::POLICY_ALLOW,
 
         /**
          * Configuration for role provider
@@ -77,7 +84,20 @@ return [
          *
          * Supported options depend of the role provider, so please refer to the official documentation
          */
-        'role_provider' => [],
+        'role_provider' => [
+            'ZfcRbac\Role\InMemoryRoleProvider' => [
+                'admin' => [
+                    'permissions' => [
+                        'home',
+                    ]
+                ],
+                'member' => [
+                    'permissions' => [
+                        'home',
+                    ]
+                ]
+            ]
+        ],
 
         /**
          * Configure the unauthorized strategy. It is used to render a template whenever a user is unauthorized
@@ -86,7 +106,7 @@ return [
             /**
              * Set the template name to render
              */
-            // 'template' => 'error/403'
+//             'template' => 'error/403'
         ],
 
         /**
@@ -97,23 +117,23 @@ return [
             /**
              * Enable redirection when the user is connected
              */
-            // 'redirect_when_connected' => true,
+             'redirect_when_connected' => true,
 
             /**
              * Set the route to redirect when user is connected (of course, it must exist!)
              */
-            // 'redirect_to_route_connected' => 'home',
+             'redirect_to_route_connected' => 'home',
 
             /**
              * Set the route to redirect when user is disconnected (of course, it must exist!)
              */
-            // 'redirect_to_route_disconnected' => 'login',
+             'redirect_to_route_disconnected' => 'zfcuser/login',
 
             /**
              * If a user is unauthorized and redirected to another route (login, for instance), should we
              * append the previous URI (the one that was unauthorized) in the query params?
              */
-            // 'append_previous_uri' => true,
+             'append_previous_uri' => false,
 
             /**
              * If append_previous_uri option is set to true, this option set the query key to use when
