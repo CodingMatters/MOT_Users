@@ -52,6 +52,7 @@ class Module
             'services.config.php',
             'controllers.config.php',
             'zfcuser.global.php',
+            'zfcrbac.global.php',
         ];
         
         foreach ($configFiles as $configFile) {
