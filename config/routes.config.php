@@ -27,25 +27,10 @@
 return [
     'console'   => [], //routing configuration for CLI modules
     'router'    => [
-        'routes' => [
-            'home' => [
-                'type'      => 'Zend\Mvc\Router\Http\Literal',
+        'routes' => [            
+            'zfcuser' => [
                 'options'   => [
-                    'route'     => '/',
-                    'defaults'  => [
-                        'controller'    => 'Application\Controller\Index',
-                        'action'        => 'index'
-                    ]
-                ]
-            ],
-            'maintenance' => [
-                'type'      => 'Zend\Mvc\Router\Http\Literal',
-                'options'   => [
-                    'route'     => '/under-construction',
-                    'defaults'  => [
-                        'controller'    => 'Application\Controller\Index',
-                        'action'        => 'maintenance'
-                    ]
+                    'route'     => '/mot/member'                    
                 ]
             ]
         ]

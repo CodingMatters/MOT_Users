@@ -28,13 +28,22 @@ namespace MotUsers;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use Zend\ModuleManager\ModuleManager;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
+use Zend\ModuleManager\Feature\ControllerProviderInterface;
+use Zend\ModuleManager\Feature\ServiceProviderInterface;
+use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 /**
  * MotUsers\Module
  *
  * @package MotUsers
  */
-class Module
+class Module implements 
+    AutoloaderProviderInterface,
+    ServiceProviderInterface,    
+    ConfigProviderInterface,
+    ControllerProviderInterface
 {
     public function onBootstrap(MvcEvent $event)
     {
@@ -50,10 +59,8 @@ class Module
     {
         $config      = [];
         $configFiles = [
-            'module.config.php', 
+            'module.config.php',
             'routes.config.php',
-            'services.config.php',
-            'controllers.config.php',
             'zfcuser.global.php',
             'zfcrbac.global.php',
         ];
@@ -74,5 +81,15 @@ class Module
                 ]
             ]
         ];
+    }
+    
+    public function getControllerConfig()
+    {
+        return include __DIR__ . '/config/controllers.config.php';
+    }
+    
+    public function getServiceConfig()
+    {
+        return include __DIR__ . '/config/services.config.php';
     }
 }

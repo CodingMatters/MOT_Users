@@ -25,9 +25,7 @@
  */
 
 return [
-    'controllers' => [
-        'invokables' => [
-            'MotUsers\Controller\User' => 'MotUsers\Controller\UserController'
-        ]
+    'invokables' => [
+        'MotUsers\Controller\User' => 'MotUsers\Controller\UserController'
     ]
 ];
