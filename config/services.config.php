@@ -25,18 +25,9 @@
  */
 
 return [
-    'service_manager' => [
-        'abstract_factories' => [
-            'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
-            'Zend\Log\LoggerAbstractServiceFactory',
-        ],
-        'aliases' => [
-            'translator' => 'MvcTranslator',
-        ],
-        'factories' => [
-            'Zend\Authentication\AuthenticationService' => function($service) {
-                return $service->get('zfcuser_auth_service');
-            }
-        ]
+    'factories' => [
+        'Zend\Authentication\AuthenticationService' => function($service) {
+            return $service->get('zfcuser_auth_service');
+        }
     ]
 ];

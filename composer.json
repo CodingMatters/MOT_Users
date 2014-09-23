@@ -18,21 +18,28 @@
         }
     ],
     "autoload": {
-      "psr-4": {
-          "MotUsers\\": "src/MotUsers/",
-          "MotUsersTest\\": "tests/MotUsersTest/"
-      }
+        "psr-4": {
+            "MotUsers\\": "src/MotUsers/"            
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MotUsersTest\\": "tests/MotUsersTest/"
+        }
     },
     "require": {
         "php": ">=5.4",
+        "evandotpro/edp-module-layouts": "dev-master",
         "zf-commons/zfc-user": "~1.2",
         "zf-commons/zfc-rbac": "~2.4",
-        "doctrine/doctrine-module": "~0.8",
-        "evandotpro/edp-module-layouts": "dev-master"
+        "doctrine/doctrine-module": "~0.8"
     },
     "require-dev": {
-	"zendframework/zend-test": "2.3.*",
-        "phpunit/phpunit": "3.*",
+        "zendframework/zendframework": "2.3.*",
+        "phpunit/phpunit": "4.*",
         "phpunit/php-invoker": "1.*"
     }
 }
