@@ -1,5 +1,5 @@
 {
-    "name": "codingmatters/mot-users",
+    "name": "megamitch/mot-users",
     "description": "User management module for Mega Mitch Credit, Inc. Office Tool (MegaOfficeTool) Platform",
     "license": "MIT",
     "type": "application",
@@ -9,7 +9,7 @@
         "users",
         "zf2"
     ],
-    "homepage": "https://github.com/CodingMatters/MOT_Users/",
+    "homepage": "https://github.com/megamitch/MOT_Users/",
     "authors": [
         {
             "name": "Gab Amba",
