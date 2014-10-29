@@ -24,16 +24,5 @@
  * THE SOFTWARE.
  */
 
-/**
- * The purpose of these files is to provide reasonable default mechanisms for autoloading 
- * the classes contained in the module, thus providing a trivial way to consume the module 
- * without requiring Zend\ModuleManager (e.g., for use outside a ZF2 application).
- */
-
-// uses Composer autoloading
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-    $composer = include __DIR__ . '/vendor/autoload.php';
-    $composer->add('MotUsers', include __DIR__ . '/autoload_register.php');
-} else {
-    throw new RuntimeException('Unable to load MotUsers module. Run `composer install` to install dependencies');
-}
+//Autoloading 3rd-party classes
+require __DIR__ . "/vendor/autoload.php";
