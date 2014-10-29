@@ -30,7 +30,38 @@ return [
         'routes' => [            
             'zfcuser' => [
                 'options'   => [
-                    'route'     => '/mot/member'                    
+                    'route'     => '/mot/member'                 
+                ]
+            ],
+            'mot' => [
+                'type'      => 'Literal',
+                'options'   => [
+                    'route'     => '/mot',
+                    'defaults'  => [
+                        'controller'    => 'Mot\Controller\Index',
+                        'action'        => 'index'
+                    ]
+                ],
+                'may_terminate' => true,
+                'child_routes' => [
+                    'members' => [
+                        'type' => 'Literal',
+                        'options' => [
+                            'route' => '/member/listing',
+                            'defaults' => [
+                                'action' => 'view-employees'
+                            ]
+                        ]
+                    ],
+                    'profile' => [
+                        'type' => 'Literal',
+                        'options' => [
+                            'route' => '/member/profile',
+                            'defaults' => [
+                                'action' => 'view-profile'
+                            ]
+                        ]
+                    ]
                 ]
             ]
         ]

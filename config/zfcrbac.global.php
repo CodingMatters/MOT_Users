@@ -51,9 +51,11 @@ return [
          'guards' => [
             'ZfcRbac\Guard\RouteGuard' => [
                 'mot' => ['admin', 'user'],
-                'zfcuser/user/login' => ['guest'],
-                'zfcuser/user/login' => ['admin'],
-                'maintenance' => ['guest', 'admin', 'user'],
+//                'mot/member/login' => ['guest'],
+//                'mot/member/register' => ['admin'],
+//                'mot/member/profile' => ['user, admin'],
+//                'mot/member/listing' => ['user, admin'],
+//                'maintenance' => ['guest', 'admin', 'user'],
             ]
          ],
 
