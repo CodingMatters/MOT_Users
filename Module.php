@@ -51,8 +51,8 @@ class Module implements
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
         
-        $serviceManager = $event->getApplication()->getServiceManager();
-        $eventManager->attach($serviceManager->get('ZfcRbac\View\Strategy\RedirectStrategy'));
+//        $serviceManager = $event->getApplication()->getServiceManager();
+//        $eventManager->attach($serviceManager->get('ZfcRbac\View\Strategy\RedirectStrategy'));
     }
 
     public function getConfig()
