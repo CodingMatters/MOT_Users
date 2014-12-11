@@ -26,14 +26,12 @@
 
 return [
     'view_manager'  => [
-        'template_map' => [
-            'layout/mot-user' => __DIR__ . '/../view/layout/layout.phtml'
-        ],
         'template_path_stack'       => [
             'mot-user'   => __DIR__ . '/../view'
         ],
     ],
     'module_layouts' => [
         'ZfcUser' => 'mot-layout/layout',
+        'MotUsers' => 'mot-layout/layout',
     ]
 ];
