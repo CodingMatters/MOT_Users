@@ -61,8 +61,9 @@ class Module implements
         $configFiles = [
             'module.config.php',
             'routes.config.php',
-            'zfcuser.global.php',
-            'zfcrbac.global.php',
+            'navigation.config.php',
+//            'zfcuser.global.php',
+//            'zfcrbac.global.php',
         ];
         
         foreach ($configFiles as $configFile) {

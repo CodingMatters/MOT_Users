@@ -25,13 +25,16 @@
  */
 
 return [
-    'view_manager'  => [
-        'template_path_stack'       => [
-            'mot-user'   => __DIR__ . '/../view'
+    'navigation' => [
+        'sidebar' => [
+            'manage-employee' => [
+                'label' => "Manage Employees",
+                'route' => "mot/members",
+                'icon' => "fa fa-users"
+            ]
         ],
-    ],
-    'module_layouts' => [
-        'ZfcUser' => 'mot-layout/layout',
-        'MotUsers' => 'mot-layout/layout',
+        "header" => [
+            
+        ]
     ]
 ];
