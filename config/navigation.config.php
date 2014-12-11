@@ -26,11 +26,42 @@
 
 return [
     'navigation' => [
-        'sidebar' => [
+        'default' => [
             'manage-employee' => [
                 'label' => "Manage Employees",
                 'route' => "mot/members",
-                'icon' => "fa fa-users"
+                'icon' => "fa fa-users",
+                'pages' => [
+                    'view-employees' => [
+                        'label' => "View All Employees",
+                        'route' => "mot/members",
+                        'icon' => "fa fa-users",
+                    ],
+//                    'register-employees' => [
+//                        'label' => "Register New Employee",
+//                        'route' => "mot/member/register",
+//                        'icon' => "fa fa-users",
+//                    ]
+                ]
+            ]
+        ],
+        'sidebar' => [
+            'manage-employee' => [
+                'label' => "Manage Employees",
+                'route' => "#",
+                'icon' => "fa fa-users",
+                'pages' => [
+                    'view-employees' => [
+                        'label' => "View All Employees",
+                        'route' => "mot/members",
+                        'icon' => "fa fa-users",
+                    ],
+//                    'register-employees' => [
+//                        'label' => "Register New Employee",
+//                        'route' => "mot/member/register",
+//                        'icon' => "fa fa-users",
+//                    ]
+                ]
             ]
         ],
         "header" => [
