@@ -29,20 +29,11 @@ namespace MotUsers\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 
 /**
- * MotUsers\Controller\UserController
- *
+ * MotUsers\Controller\MambuUserController
+ * 
  * @package MotUsers\Controller
  */
-class UserController extends AbstractActionController
+class MambuUserController extends AbstractActionController
 {
-    public function indexAction()
-    {
-        
-    }
     
-    
-    public function registerAction()
-    {
-        
-    }
 }

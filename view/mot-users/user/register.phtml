@@ -1,0 +1,132 @@
+<?php
+    
+    $this->headLink()->prependStylesheet($this->basePath() . '/assets/mot-users/css/selection.css');
+    
+    $this->inlineScript()
+//            ->prependFile($this->basePath() . '/assets/mot/js/custom.js')
+            ->prependFile($this->basePath() . '/assets/mot-users/js/selection.min.js')
+            ->prependFile($this->basePath() . '/assets/mot-users/js/jquery.validate.min.js')
+            ->prependFile($this->basePath() . '/assets/mot-users/js/bootstrap-wizard.min.js')
+            ->prependFile($this->basePath() . '/assets/mot/js/retina.min.js')
+//            ->prependFile($this->basePath() . '/assets/mot/js/pace.min.js')
+            ->prependFile($this->basePath() . '/assets/mot/js/modernizr.min.js')
+            ->prependFile($this->basePath() . '/assets/jquery-ui/jquery-ui.min.js')
+        ;
+?>
+
+<div class="contentpanel contentpanel-wizard">
+    <div class="row">
+        <form method="post" id="basicWizard" class="panel-wizard">
+            <ul class="nav nav-justified nav-wizard">
+                <li><a href="#tab1" data-toggle="tab"><strong>Step 1:</strong> Basic Info</a></li>
+                <li><a href="#tab2" data-toggle="tab"><strong>Step 2:</strong> Product Info</a></li>
+                <li><a href="#tab3" data-toggle="tab"><strong>Step 3:</strong> Payment</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane" id="tab1">
+                    <div class="form-group">
+                        <label class="col-sm-4">Firstname</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="firstname" class="form-control" />
+                        </div>
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <label class="col-sm-4">Lastname</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="lastname" class="form-control" />
+                        </div>
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <label class="col-sm-4">Gender</label>
+                        <div class="col-sm-8">
+                            <div class="rdio rdio-primary">
+                                <input type="radio" checked="checked" id="male" value="m" name="radio">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="rdio rdio-primary">
+                                <input type="radio" value="f" id="female" name="radio">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div><!-- form-group -->
+                </div><!-- tab-pane -->
+
+                <div class="tab-pane" id="tab2">
+                    <div class="form-group">
+                        <label class="col-sm-4">Product ID</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="product_id" class="form-control" />
+                        </div>
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <label class="col-sm-4">Product Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="product_name" class="form-control" />
+                        </div>
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <label class="col-sm-4">Category</label>
+                        <div class="col-sm-4">
+                            <select class="width100p" data-placeholder="Choose One">
+                                <option value="">Choose One</option>
+                                <option value="">3D Animation</option>
+                                <option value="">Web Design</option>
+                                <option value="">Software Engineering</option>
+                            </select>
+                        </div>
+                    </div><!-- form-group -->
+                </div><!-- tab-pane -->
+
+                <div class="tab-pane" id="tab3">
+                    <div class="form-group">
+                        <label class="col-sm-4">Card No</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="cardno" class="form-control" />
+                        </div>
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <label class="col-sm-4">Expiration</label>
+                        <div class="col-sm-4">
+                            <select class="width100p" data-placeholder="Month">
+                                <option value="">Choose One</option>
+                                <option value="">January</option>
+                                <option value="">February</option>
+                                <option value="">March</option>
+                                <option value="">...</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-4">
+                            <select class="width100p" data-placeholder="Year">
+                                <option value="">Choose One</option>
+                                <option value="">2013</option>
+                                <option value="">2014</option>
+                                <option value="">2015</option>
+                                <option value="">...</option>
+                            </select>
+                        </div>
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <label class="col-sm-4">CSV</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="csv" class="form-control" />
+                        </div>
+                    </div><!-- form-group -->
+                </div><!-- tab-pane -->
+            </div><!-- tab-content -->
+
+            <ul class="list-unstyled wizard">
+                <li class="pull-left previous"><button type="button" class="btn btn-default">Previous</button></li>
+                <li class="pull-right next"><button type="button" class="btn btn-primary">Next</button></li>
+                <li class="pull-right finish hide"><button type="submit" class="btn btn-primary">Finish</button></li>
+            </ul>
+
+        </form><!-- #basicWizard -->
+    </div>
+</div>
