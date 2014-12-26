@@ -51,7 +51,7 @@ return [
                             'defaults' => [
                                 'action' => 'view-employees'
                             ]
-                        ]
+                        ],
                     ],
                     'profile' => [
                         'type' => 'Literal',
@@ -59,6 +59,16 @@ return [
                             'route' => '/member/profile',
                             'defaults' => [
                                 'action' => 'view-profile'
+                            ]
+                        ]
+                    ],
+                    'register' => [
+                        'type' => 'Literal',
+                        'options' => [
+                            'route' => '/user/register',
+                            'defaults' => [
+                                'controller' => 'MotUsers\Controller\User',
+                                'action' => 'register'
                             ]
                         ]
                     ]
