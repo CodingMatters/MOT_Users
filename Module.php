@@ -28,7 +28,6 @@ namespace MotUsers;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
-use Zend\ModuleManager\ModuleManager;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ControllerProviderInterface;
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
@@ -49,10 +48,7 @@ class Module implements
     {
         $eventManager        = $event->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
-        $moduleRouteListener->attach($eventManager);
-        
-//        $serviceManager = $event->getApplication()->getServiceManager();
-//        $eventManager->attach($serviceManager->get('ZfcRbac\View\Strategy\RedirectStrategy'));
+        $moduleRouteListener->attach($eventManager);        
     }
 
     public function getConfig()
@@ -62,8 +58,6 @@ class Module implements
             'module.config.php',
             'routes.config.php',
             'navigation.config.php',
-//            'zfcuser.global.php',
-//            'zfcrbac.global.php',
         ];
         
         foreach ($configFiles as $configFile) {
