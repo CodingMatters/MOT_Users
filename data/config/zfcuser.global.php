@@ -134,7 +134,7 @@ $settings = [
      *
      * Accepted values: boolean true or false
      */
-    //'use_redirect_parameter_if_present' => true,
+    'use_redirect_parameter_if_present' => true,
 
     /**
 	 * Sets the view template for the user login widget
@@ -142,7 +142,7 @@ $settings = [
 	 * Default value: 'zfc-user/user/login.phtml'
      * Accepted values: string path to a view script
 	 */
-    //'user_login_widget_view_template' => 'zfc-user/user/login.phtml',
+    'user_login_widget_view_template' => 'zfc-user/user/login.phtml',
 
     /**
      * Login Redirect Route
@@ -153,7 +153,7 @@ $settings = [
      * Accepted values: A valid route name within your application
      *
      */
-     'login_redirect_route' => 'mot',
+     'login_redirect_route' => 'home',
 
     /**
      * Logout Redirect Route
@@ -193,7 +193,7 @@ $settings = [
      * 
      * Should user's state be used in the registration/login process?
      */
-    //'enable_user_state' => true,
+    'enable_user_state' => true,
     
     /**
      * Default user state upon registration
@@ -201,7 +201,7 @@ $settings = [
      * What state user should have upon registration?
      * Allowed value type: integer
      */
-//    'default_user_state' => 1,
+    'default_user_state' => 0,
     
     /**
      * States which are allowing user to login
@@ -215,7 +215,7 @@ $settings = [
     /**
      * User table name
      */
-    //'table_name' => 'user',
+    'table_name' => 'user_'. date('Y'),
     
     /**
      * End of ZfcUser configuration

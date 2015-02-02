@@ -50,12 +50,8 @@ return [
          */
          'guards' => [
             'ZfcRbac\Guard\RouteGuard' => [
-                'mot' => ['admin', 'user'],
-//                'mot/member/login' => ['guest'],
-//                'mot/member/register' => ['admin'],
-//                'mot/member/profile' => ['user, admin'],
-//                'mot/member/listing' => ['user, admin'],
-//                'maintenance' => ['guest', 'admin', 'user'],
+                'home' => ['admin', 'user'],
+                'mot*' => ['admin', 'user']
             ]
          ],
 
@@ -90,11 +86,13 @@ return [
             'ZfcRbac\Role\InMemoryRoleProvider' => [
                 'admin' => [
                     'permissions' => [
+                        '/',
                         'mot',
                     ]
                 ],
                 'member' => [
                     'permissions' => [
+                        '/',
                         'mot',
                     ]
                 ]
@@ -124,7 +122,7 @@ return [
             /**
              * Set the route to redirect when user is connected (of course, it must exist!)
              */
-             'redirect_to_route_connected' => 'mot',
+             'redirect_to_route_connected' => 'home',
 
             /**
              * Set the route to redirect when user is disconnected (of course, it must exist!)
