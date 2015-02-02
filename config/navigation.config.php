@@ -46,7 +46,9 @@ return [
             ]
         ],
         'sidebar' => [
-            'manage-employee' => [
+            'dashboard' => [],   //DO NOT CHANGE THE SEQUENCE
+//            'mot-reports' => [],
+            'mot-users' => [
                 'label' => "Manage Employees",
                 'route' => "#",
                 'icon' => "fa fa-users",
