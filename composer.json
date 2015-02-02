@@ -9,12 +9,12 @@
         "users",
         "zf2"
     ],
-    "homepage": "https://megamitch.ph",
+    "homepage": "https://mot.megamitch.com",
     "authors": [
         {
             "name": "Gab Amba",
             "email": "gamba@gabbydgab.com",
-            "homepage": "http://www.gabbydgab.com/"            
+            "homepage": "http://www.gabbydgab.com/"
         }
     ],
     "autoload": {
@@ -32,10 +32,10 @@
     },
     "require": {
         "php": ">=5.4",
-        "evandotpro/edp-module-layouts": "dev-master",
+        "doctrine/doctrine-module": "~0.8",
         "zf-commons/zfc-user": "~1.2",
-        "zf-commons/zfc-rbac": "~2.4",
-        "doctrine/doctrine-module": "~0.8"
+        "zf-commons/zfc-user-doctrine-orm": "~1.0",
+        "bjyoungblood/bjy-authorize": "~1.4"
     },
     "require-dev": {
         "zendframework/zendframework": "2.3.*",
