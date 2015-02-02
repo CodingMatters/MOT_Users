@@ -31,7 +31,7 @@ return [
         ],
     ],
     'module_layouts' => [
-        'ZfcUser' => 'mot-layout/layout',
+        'ZfcUser' => 'mot-layout/auth',
         'MotUsers' => 'mot-layout/layout',
     ]
 ];

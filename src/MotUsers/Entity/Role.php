@@ -3,7 +3,7 @@
 /**
  * The MIT License
  *
- * Copyright (c) 2012-2014, contributors of Mega Mitch Credit, Inc. software project.
+ * Copyright (c) 2012-2015, contributors of Mega Mitch Credit, Inc. software project.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,8 +24,16 @@
  * THE SOFTWARE.
  */
 
-return [
-    'factories' => [
-        'Zend\Authentication\AuthenticationService' => 'zfcuser_auth_service'
-    ]
-];
+namespace MotUsers\Entity;
+
+use BjyAuthorize\Acl\Role;
+
+/**
+ * MotUsers\Entity\Role
+ *
+ * @package MotUsers\Entity
+ */
+class Role
+{
+    
+}
