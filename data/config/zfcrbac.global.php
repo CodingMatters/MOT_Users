@@ -50,8 +50,8 @@ return [
          */
          'guards' => [
             'ZfcRbac\Guard\RouteGuard' => [
-                'home' => ['admin', 'user'],
-                'mot*' => ['admin', 'user']
+                'mot*' => ['user'],
+                'mot/user/register' => ['admin']
             ]
          ],
 
@@ -82,22 +82,22 @@ return [
          *
          * Supported options depend of the role provider, so please refer to the official documentation
          */
-        'role_provider' => [
-            'ZfcRbac\Role\InMemoryRoleProvider' => [
-                'admin' => [
-                    'permissions' => [
-                        '/',
-                        'mot',
-                    ]
-                ],
-                'member' => [
-                    'permissions' => [
-                        '/',
-                        'mot',
-                    ]
-                ]
-            ]
-        ],
+//        'role_provider' => [
+//            'ZfcRbac\Role\InMemoryRoleProvider' => [
+//                'admin' => [
+//                    'permissions' => [
+//                        '/',
+//                        'mot',
+//                    ]
+//                ],
+//                'member' => [
+//                    'permissions' => [
+//                        '/',
+//                        'mot',
+//                    ]
+//                ]
+//            ]
+//        ],
 
         /**
          * Configure the unauthorized strategy. It is used to render a template whenever a user is unauthorized

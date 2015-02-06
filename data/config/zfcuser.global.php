@@ -30,7 +30,7 @@ $settings = [
      *
      * Accepted values: boolean true or false
      */
-    'enable_registration' => true,
+    'enable_registration' => false,
 
     /**
      * Enable Username
@@ -60,7 +60,7 @@ $settings = [
      *
      * Accepted values: boolean true or false
      */
-    'enable_display_name' => true,
+    //'enable_display_name' => false,
 
     /**
      * Modes for authentication identity match
@@ -134,7 +134,7 @@ $settings = [
      *
      * Accepted values: boolean true or false
      */
-    'use_redirect_parameter_if_present' => true,
+    //'use_redirect_parameter_if_present' => true,
 
     /**
 	 * Sets the view template for the user login widget
@@ -163,7 +163,7 @@ $settings = [
      * Default value: 'zfcuser/login'
      * Accepted values: A valid route name within your application
      */
-//     'logout_redirect_route' => 'zfcuser/login',
+     //'logout_redirect_route' => 'zfcuser/login',
 
     /**
      * Password Security
@@ -201,7 +201,7 @@ $settings = [
      * What state user should have upon registration?
      * Allowed value type: integer
      */
-    'default_user_state' => 0,
+    'default_user_state' => 1,
     
     /**
      * States which are allowing user to login
@@ -215,7 +215,7 @@ $settings = [
     /**
      * User table name
      */
-    'table_name' => 'user_'. date('Y'),
+    //'table_name' => 'user',
     
     /**
      * End of ZfcUser configuration
