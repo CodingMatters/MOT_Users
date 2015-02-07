@@ -26,8 +26,6 @@
 
 namespace MotUsers\Entity;
 
-use BjyAuthorize\Acl\Role;
-
 /**
  * MotUsers\Entity\Role
  *
