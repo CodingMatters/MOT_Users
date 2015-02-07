@@ -3,7 +3,7 @@
 /**
  * The MIT License
  *
- * Copyright (c) 2012-2014, contributors of Mega Mitch Credit, Inc. software project.
+ * Copyright (c) 2012-2015, Mega Mitch, Inc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,6 @@
 
 namespace MotUsers;
 
-use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 use Zend\ModuleManager\Feature\ControllerProviderInterface;
@@ -46,9 +45,12 @@ class Module implements
 {
     public function onBootstrap(MvcEvent $event)
     {
-        $eventManager        = $event->getApplication()->getEventManager();
-        $moduleRouteListener = new ModuleRouteListener();
-        $moduleRouteListener->attach($eventManager);        
+        $serviceManager = $event->getApplication()->getServiceManager();        
+        $eventManager   = $event->getApplication()->getEventManager();
+        
+        $eventManager->attach(
+            $serviceManager->get('ZfcRbac\View\Strategy\RedirectStrategy')
+        );
     }
 
     public function getConfig()
@@ -61,7 +63,9 @@ class Module implements
         ];
         
         foreach ($configFiles as $configFile) {
-            $config = \Zend\Stdlib\ArrayUtils::merge($config, include  __DIR__ .'/config/'. $configFile);
+            $config = \Zend\Stdlib\ArrayUtils::merge(
+                $config, include  __DIR__ .'/config/'. $configFile
+            );
         }
 
         return $config;
