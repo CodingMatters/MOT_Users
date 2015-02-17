@@ -14,7 +14,13 @@
         {
             "name": "Gab Amba",
             "email": "gamba@gabbydgab.com",
-            "homepage": "http://www.gabbydgab.com/"
+            "homepage": "http://www.gabbydgab.com/",
+            "role": "Development Lead"
+        },
+        {
+            "name": "Jermain Obial",
+            "email": "jerm.obial@megamitch.com",
+            "role": "Product Development Manager"
         }
     ],
     "autoload": {

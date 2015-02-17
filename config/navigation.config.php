@@ -3,7 +3,7 @@
 /**
  * The MIT License
  *
- * Copyright (c) 2012-2014, contributors of Mega Mitch Credit, Inc. software project.
+ * Copyright (c) 2012-2015, Mega Mitch, Inc.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -47,7 +47,7 @@ return [
         ],
         'sidebar' => [
             'dashboard' => [],   //DO NOT CHANGE THE SEQUENCE
-//            'mot-reports' => [],
+            'mot-reports' => [],
             'mot-users' => [
                 'label' => "Manage Employees",
                 'route' => "#",
@@ -58,11 +58,11 @@ return [
                         'route' => "mot/members",
                         'icon' => "fa fa-users",
                     ],
-                    'register-employees' => [
-                        'label' => "Register New Employee",
-                        'route' => "mot/register",
-                        'icon' => "fa fa-users",
-                    ]
+//                    'register-employees' => [
+//                        'label' => "Register New Employee",
+//                        'route' => "mot/register",
+//                        'icon' => "fa fa-users",
+//                    ]
                 ]
             ]
         ],
