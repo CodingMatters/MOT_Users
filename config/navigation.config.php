@@ -48,23 +48,23 @@ return [
         'sidebar' => [
             'dashboard' => [],   //DO NOT CHANGE THE SEQUENCE
             'mot-reports' => [],
-            'mot-users' => [
-                'label' => "Manage Employees",
-                'route' => "#",
-                'icon' => "fa fa-users",
-                'pages' => [
-                    'view-employees' => [
-                        'label' => "View All Employees",
-                        'route' => "mot/members",
-                        'icon' => "fa fa-users",
-                    ],
+//            'mot-users' => [
+//                'label' => "Manage Employees",
+//                'route' => "#",
+//                'icon' => "fa fa-users",
+//                'pages' => [
+//                    'view-employees' => [
+//                        'label' => "View All Employees",
+//                        'route' => "mot/members",
+//                        'icon' => "fa fa-users",
+//                    ],
 //                    'register-employees' => [
 //                        'label' => "Register New Employee",
 //                        'route' => "mot/register",
 //                        'icon' => "fa fa-users",
 //                    ]
-                ]
-            ]
+//                ]
+//            ]
         ],
         "header" => [
             
